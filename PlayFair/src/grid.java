@@ -1,3 +1,15 @@
+/*Method: Grid
+ * 
+ * The codeWord method takes in the secret codeword, removes any duplicated letters and passed the value onto table.
+ * The table method sorts out the alphabet into groups of 5 (last group having 6) and prints it out.
+ * 
+ * Author: Harley Reimels
+ * Creation Date: 02/10/2023
+ * 
+ */
+
+
+
 import java.util.ArrayList;
 
 // Get Alphabet

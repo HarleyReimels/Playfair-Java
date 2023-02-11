@@ -1,3 +1,15 @@
+/*Method:phraseChecker
+ * 
+ * The phrase checker method removes any character from the string that
+ * is not alphabetical.
+ * 
+ * Author: Harley Reimels
+ * Creation Date: 02/10/2023
+ * 
+ */
+
+
+
 import java.util.Scanner;
 
 public class phraseScrambler {
@@ -12,7 +24,7 @@ public class phraseScrambler {
 		String phraseCheck = phrase;
 		Character c = ' ';
 		
-		// * is breaker input
+		//FIXME: * breakes input
 		for ( int i = 0; i < phrase.length(); ++i) {
 			c = phrase.charAt(i);
 			if (!Character.isAlphabetic(c)) {
