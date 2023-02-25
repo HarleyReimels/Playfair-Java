@@ -16,6 +16,8 @@ import java.util.ArrayList;
 public class grid {
 	String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+	// The table method deletes any duplicate letters from a string and returns the new string
+	// in a 5 by 5 grid
 	public ArrayList<String> table(String words) {
 
 		ArrayList<String> row = new ArrayList<String>();
@@ -49,6 +51,7 @@ public class grid {
 	}
 
 	// Codeword, special word or phrase with duplicates removed
+	// May need to pass in final letter of alphabet
 	public String newCodeWord(String sentence) {
 
 		String uniqueLetters = " ";

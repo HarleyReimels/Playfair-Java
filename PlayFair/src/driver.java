@@ -21,18 +21,39 @@ public class driver {
 		ArrayList<String> myTable = new ArrayList<String>();
 		Scanner scnr = new Scanner(System.in);
 		String secretPhrase;
+		String message;
+		String lastLetter;
+		String lastRow;
 		
-		// Get codeword
-		code = table.newCodeWord("hello worldyz");
-		//Pass code into table
-		myTable = table.table(code);
-		System.out.println(myTable.get(0));
+		
+		// Get original codeword from user
 		System.out.println("Please enter the phrase you want to encode: ");
 		secretPhrase = scnr.nextLine();
 		
 		// Verify if letters are alphabet
 		pS.phraseChecker(secretPhrase);
 		
+		// Get new revised codeword
+		code = table.newCodeWord(secretPhrase);
+		
+		//Pass code into table
+		myTable = table.table(code);
+		
+		// Getting the last letter of the table
+		lastRow = myTable.get(4);
+		lastLetter = lastRow.substring(lastRow.length()-1);
+		System.out.println("THIS THIS THE FINAL LETTER: " + lastLetter);
+		
+		// Print the table
+		for(int i = 0; i<5;++i) {
+		System.out.println(myTable.get(i));
+		}
+		
+		// Getting users message to decode
+		System.out.println("What is your message: ");
+		message = scnr.nextLine().toUpperCase();
+		
+		pS.messageScrambler(message, lastLetter);
 	}
 
 }
